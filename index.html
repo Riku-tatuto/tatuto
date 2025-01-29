@@ -60,7 +60,7 @@
         .content {
             display: none;
             padding: 20px;
-            margin-top: 40px; /* メニューの高さ分のマージンを追加 */
+            margin-top: 50px; /* メニューの高さ分のマージンを追加 */
         }
 
         .content.active {
@@ -78,36 +78,41 @@
             // 指定されたコンテンツを表示する
             document.getElementById(contentId).classList.add('active');
         }
-        window.onload = function() {
-        showContent('homeContent');
-    };
     </script>
 </head>
 <body>
     <nav class="menu">
         <ul>
             <li class="left-button"><a href="#" onclick="showContent('homeContent')">たつとサイト</a></li>
-            <li class="right-buttons"><a href="#" onclick="showContent('aboutContent')">説明</a></li>
+            <li class="right-buttons"><a href="#" onclick="showContent('termsContent')">利用規約</a></li> 
+            <li class="right-buttons"><a href="#" onclick="showContent('aboutContent')">アバウト</a></li>
             <li class="right-buttons"><a href="#" onclick="showContent('servicesContent')">サービス</a></li>
+            <li class="right-buttons"><a href="#" onclick="showContent('contactContent')">コンタクト</a></li>
         </ul>
     </nav>
+    <div id="homeContent" class="content active">
+        <h1>ホームページへようこそ</h1>
+        <p>ここはホームセクションです。</p>
+    </div>
     <div id="aboutContent" class="content">
-        <h1>説明</h1>
-        <p>説明です。</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        <h1>アバウト</h1>
+        <p>ここはアバウトセクションです。</p>
     </div>
     <div id="servicesContent" class="content">
         <h1>サービス</h1>
-        <p>サービスはありません。</p>
+        <p>ここはサービスセクションです。</p>
+    </div>
+    <div id="contactContent" class="content">
+        <h1>コンタクト</h1>
+        <p>ここはコンタクトセクションです。</p>
     </div>
     <div id="leftContent" class="content">
-        <h1>ホーム</h1>
-        <p>上のバナーは押せます。
-          ホームを最初の画面にしないのは地味だから。</p>
+        <h1>video plus</h1>
+        <p>ここはvideo plusのセクションです。</p>
     </div>
     <div id="termsContent" class="content">
         <h1>利用規約</h1>
-        <p>省略させていただきます。</p>
+        <p>あ</p>
     </div>
 </body>
 </html>
