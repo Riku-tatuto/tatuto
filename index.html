@@ -67,35 +67,48 @@
             display: block;
         }
 
-        .btn,
-        a.btn,
-        button.btn {
-        　  font-size: 1.6rem;
-        　  font-weight: 700;
-            line-height: 1.5;
-            position: relative;
-            display: inline-block;
-            padding: 1rem 4rem;
-            cursor: pointer;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-          　user-select: none;
-            -webkit-transition: all 0.3s;
-            transition: all 0.3s;
-            text-align: center;
-            vertical-align: middle;
-            text-decoration: none;
-            letter-spacing: 0.1em;
-            color: #212529;
-            border-radius: 0.5rem;
-        }
+          /* 横並びにする */
+  .container {
+    display: flex;
+    align-items: center; /* 縦方向の中央揃え */
+    gap: 20px; /* 文字とボタンの間隔 */
+  }
 
-        .btn--orange,
-        a.btn--orange {
-          color: #fff;
-          background-color: #eb6100;
-        }
+  /* ボタンの基本スタイル */
+  .btn {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #fff; /* ← 修正: 文字を白にする */
+    background-color: #eb6100; /* ← 修正: 背景色をオレンジに */
+    border-radius: 0.5rem; /* ← 修正: 角を丸く */
+    border: none; /* ← 余計な枠線を消す */
+  }
+
+  /* オレンジ色のボタン */
+  .btn--orange {
+    background-color: #eb6100;
+  }
+
+  /* もっと角を丸く */
+  .btn--radius {
+    border-radius: 100vh;
+  }
+
+  /* ボタンを押したときのエフェクト */
+  .btn:hover {
+    opacity: 0.8;
+  }
+</style>
+
          
         
 a.btn--radius {
